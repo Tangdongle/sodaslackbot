@@ -5,13 +5,14 @@ import re
 import logging
 from peewee import IntegrityError as ieerror
 from peewee import *
+from datetime import datetime
 
 DB_FILE = 'db/sodarecords.db'
 
 db = SqliteDatabase(DB_FILE)
 
 user_target_command = re.compile("^(\w+): @(\w+) (.*)")
-pepsi_command_string = "^(\d\d?) cans? of ([\w\s]+). fridge restocked at (\d\d:\d\d\s?[a|p]m)"
+pepsi_command_string = "^(\d\d?) cans? of ([\w\s]+).*"
 pepsi_pattern = re.compile(pepsi_command_string)
 
 logger = logging.getLogger('sodabot')
@@ -56,10 +57,6 @@ class Purchase(Model):
 
     class Meta:
         database = db
-        indexes = (
-            (('buyer', 'drink_type'), True),
-        )
-
 
 def parse_slack_output(slack_rtm_output):
     if slack_rtm_output not in (None, []):
@@ -85,24 +82,28 @@ def handle_command(command, channel,  user):
     if pepsi_match is not None:
         num = pepsi_match.group(1)
         drink_type = pepsi_match.group(2)
-        datetime = pepsi_match.group(3)
+        dt = datetime.utcnow()
 
         user_model = get_user(user)
         drink_model = get_drink_type(drink_type)
-        add_purchase(
+        purchase = add_purchase(
             buyer=user_model,
             drink_type=drink_model,
-            purchase_date=datetime,
+            purchase_date=dt,
             num_cans=num
         )
+        if purchase:
+            slack_client.api_call("chat.postMessage", channel=channel,
 
-        slack_client.api_call("chat.postMessage", channel=channel,
+                                  text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
+        else:
+            slack_client.api_call("chat.postMessage", channel=channel,
 
-                              text="%s bought %s cans of %s on %s" % (user, num, drink_type, datetime), as_user=True)
+                                text="Purchase failed!")
 
     else:
         slack_client.api_call("chat.postMessage", channel=channel,
-                              text="I don't understand. Pepsi command is '{num} cans of {drink type}. fridge restocked at {HH:MM[a/p]m'", as_user=True)
+                              text="I don't understand. Pepsi command is '{num} cans of {drink type}'", as_user=True)
 
 def get_user(username):
     try:
@@ -116,14 +117,14 @@ def get_drink_type(drink_type):
         with db.atomic():
             return DrinkType.create(name=drink_type)
     except ieerror:
-        return DrinkType.get(Drink.name == drink_type)
+        return DrinkType.get(DrinkType.name == drink_type)
 
 def add_purchase(buyer, drink_type, purchase_date, num_cans):
     try:
         with db.atomic():
-            purchase = Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
-            return purchase
-    except ieerror:
+            return Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
+    except ieerror as ie:
+        logger.debug("Error: %s", ie.message)
         return None
 
 

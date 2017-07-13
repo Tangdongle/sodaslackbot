@@ -1,19 +1,32 @@
-import os
-import time
-from slackclient import SlackClient
-import re
 import logging
-from peewee import IntegrityError as ieerror
-from peewee import *
+from collections import deque
+import os
+import re
+import time
+
 from datetime import datetime
+from peewee import *
+from peewee import IntegrityError as ieerror
+from slackclient import SlackClient
+
+from commands import *
 
 DB_FILE = 'db/sodarecords.db'
 
-db = SqliteDatabase(DB_FILE)
 
-user_target_command = re.compile("^(\w+): @(\w+) (.*)")
-pepsi_command_string = "^(\d\d?) cans? of ([\w\s]+).*"
-pepsi_pattern = re.compile(pepsi_command_string)
+SCANNER = re.compile('[A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+''')
+COMMAND_LIST = {
+    "pepsi": Pepsi
+}
+
+db = SqliteDatabase(DB_FILE)
+#Matches the user sending (1), the target user (2) and the command (3)
+#user_target_command = re.compile("^(\w+): @(\w+) (.*)")
+#pepsi_command_string = "^(\d\d?) cans? of ([\w\s]+).*"
+#
+#add_for_user_command_string = "^(\w+)! (\d\d?) cans? of ([\w\s]+).*"
+
+#pepsi_pattern = re.compile(pepsi_command_string)
 
 logger = logging.getLogger('sodabot')
 logger.setLevel(logging.DEBUG)
@@ -64,11 +77,12 @@ def parse_slack_output(slack_rtm_output):
             content = msg.get('content', None)
             if content is None:
                 return None, None, None
-            matches = re.match(user_target_command, content)
-            if matches is not None:
-                user = matches.group(1)
-                target = matches.group(2)
-                command = matches.group(3)
+            matches = re.findall(SCANNER, content)
+            if matches not in (None, []):
+                user = matches[0]
+                target = matches[1]
+                #Deque for poppality
+                command = deque(matches[2:])
 
                 if target == AT_BOT:
                     logger.debug("%s has called for the %s command", user, command)
@@ -78,54 +92,24 @@ def parse_slack_output(slack_rtm_output):
 def handle_command(command, channel,  user):
     if command is None or channel is None:
         return False
-    pepsi_match = re.match(pepsi_pattern, command.lower())
-    if pepsi_match is not None:
-        num = pepsi_match.group(1)
-        drink_type = pepsi_match.group(2)
-        dt = datetime.utcnow()
-
-        user_model = get_user(user)
-        drink_model = get_drink_type(drink_type)
-        purchase = add_purchase(
-            buyer=user_model,
-            drink_type=drink_model,
-            purchase_date=dt,
-            num_cans=num
-        )
-        if purchase:
+    try:
+        #Access our named command
+        result = COMMAND_LIST[command.popleft()](command, channel, user)
+    except (NameError, KeyError):
+        slack_client.api_call("chat.postMessage", channel=channel, text="@%s I don't understand that command. Available commands are: %s" % (user.username, "\n\t".join(["`{}`".format(com) for com in
+                                                                                                                                                                         COMMAND_LIST.keys()])), as_user=True)
+    except IndexError:
+        if str(time.time())[-1] == '4':
             slack_client.api_call("chat.postMessage", channel=channel,
-
-                                  text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
+                                  text="@%s Hi! I know where you live!" % (user.username))
+        if str(time.time())[-1] == '7':
+            slack_client.api_call("chat.postMessage", channel=channel,
+                                  text="@%s Hi! I went through your photo albums and now I can memorize the first 8 years of your life!" % (user.username), as_user=True)
         else:
             slack_client.api_call("chat.postMessage", channel=channel,
+                                  text="@%s Hi! You didn't supply a command. Wanna just chat about soda?" % (user.username), as_user=True)
 
-                                text="Purchase failed!")
 
-    else:
-        slack_client.api_call("chat.postMessage", channel=channel,
-                              text="I don't understand. Pepsi command is '{num} cans of {drink type}'", as_user=True)
-
-def get_user(username):
-    try:
-        with db.atomic():
-            return User.create(username=username)
-    except ieerror:
-        return User.get(User.username == username)
-
-def get_drink_type(drink_type):
-    try:
-        with db.atomic():
-            return DrinkType.create(name=drink_type)
-    except ieerror:
-        return DrinkType.get(DrinkType.name == drink_type)
-
-def add_purchase(buyer, drink_type, purchase_date, num_cans):
-    try:
-        with db.atomic():
-            return Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
-    except ieerror as ie:
-        logger.debug("Error: %s", ie.message)
-        return None
 
 
 if __name__ == '__main__':

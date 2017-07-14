@@ -170,3 +170,8 @@
 2017-07-10 16:21:46,362 - sodabot - DEBUG - ryanc has called for the sean! 24 cans of Pepsi Max command
 2017-07-12 12:19:46,817 - sodabot - DEBUG - [u'ryanc', u'sodabot', u'sean', u'20', u'cans', u'of', u'Pepsi', u'Max']
 2017-07-12 12:20:54,833 - sodabot - DEBUG - [u'ryanc', u'sodabot', u'sean', u'20', u'cans', u'of', u'Pepsi', u'Max']
+2017-07-14 02:24:00,304 - sodabot - DEBUG - Unknown command with command pepsi and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 'PepsiCommand' object has no attribute 'registry'
+2017-07-14 02:32:37,892 - sodabot - DEBUG - Unknown command with command pepsi and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 'PepsiCommand' object has no attribute 'registry'
+2017-07-14 03:03:16,174 - sodabot - DEBUG - Syntax Error in <class 'sodaslackbot.commands.pattern_must_match'> in purchase: pattern_must_match error: 
+2017-07-14 03:03:37,827 - sodabot - DEBUG - Syntax Error in <class 'sodaslackbot.commands.pattern_must_match'> in purchase: pattern_must_match error: 
+2017-07-14 03:04:35,947 - sodabot - DEBUG - Syntax Error: pattern_must_match error:  : <class 'sodaslackbot.commands.pattern_must_match'> in purchase: pattern_must_match error: 

@@ -1,6 +1,10 @@
 from functools import wraps
+from collections import deque
 from copy import copy
 import re
+
+from models import User, Purchase, DrinkType
+from config import logger
 
 REGISTRY = {}
 
@@ -8,44 +12,68 @@ class register_command(object):
     def __init__(cls, command):
         cls._registered_command = command
 
-#def pattern_must_match(pattern):
-#    print pattern
-#    def pattern_must_match_decorator(func):
-#        @wraps(func)
-#        def ret_fun(*args, **kwargs):
-#            print args
-#            return func(*args, **kwargs)
-#        return ret_fun
-#    return pattern_must_match_decorator
+    def __call__(cls, *args, **kwargs):
+        return cls._registered_command(*args, **kwargs)
+
+class default_command(object):
+    def __init__(cls, command):
+        cls._default_command = command
+
+    def __call__(cls, *args, **kwargs):
+        return cls._default_command(*args, **kwargs)
 
 class pattern_must_match(object):
-
     def __init__(self, pattern):
-        self._pattern = pattern
+        self._pattern = re.compile(pattern)
         print "init"
 
+    def syntax_error(self, message, fn, *args, **kwargs):
+        logger.debug("Syntax Error: %s : %s in %s: %s", message, self.__class__, fn.__name__, message)
+
     def __call__(self, fn, *args, **kwargs):
+        print "called"
 
         def ret_fun(*args, **kwargs):
             print self
-            return fn(self, *args, **kwargs)
+            print args
+            if re.match(self._pattern, " ".join(args)) is not None:
+                return fn(self, *args, **kwargs)
+            else:
+                return self.syntax_error("pattern_must_match error: ", fn, *args, **kwargs)
         return ret_fun
 
 class MetaClass(type):
     def __init__(cls, name, bases, attrs):
-        REGISTRY[name] = {}
-        for key, val in attrs.iteritems():
-            properties = getattr(val, '_registered_command', None)
-            if properties is not None:
-                REGISTRY[name][key] = properties
+        if cls._module_id not in (None, ""):
+            module_id = cls._module_id.lower()
+
+            REGISTRY[module_id] = {}
+            for key, val in attrs.iteritems():
+                registered_command = getattr(val, '_registered_command', None)
+                if registered_command is not None:
+                    REGISTRY[module_id][key] = registered_command
+
+                default_command = getattr(val, '_default_command', None)
+                if default_command is not None:
+                    #If we have more than one default, we bail out
+                    if REGISTRY[module_id].get('default', None):
+                        raise Exception("Cannot have more than 1 default command")
+                    REGISTRY[module_id]['default'] = default_command
+        else:
+            #We skip any class without a _module_id
+            print "Skipping %s" % cls.__class__
 
 class BotCommandModule(object):
     __metaclass__ = MetaClass
+    _module_id = ""
 
 
-class PepsiModule(BotCommandModule):
+    def command_error(self, message, command, *args, **kwrgs):
+        logger.debug("Unknown command with command %s and args %s: %s", command, args, message)
 
-    _module_name = "Pepsi"
+class PepsiCommand(BotCommandModule):
+
+    _module_id = "Pepsi"
 
     @register_command
     def me(self, args):
@@ -55,16 +83,30 @@ class PepsiModule(BotCommandModule):
     def list(self, args):
         print "TEST"
 
+    @default_command
     @register_command
-    @pattern_match('(\d\d?) cans? of ([\w\s]+).*')
+    @pattern_must_match('(\d\d?) cans? of ([\w\s]+).*')
     def purchase(self, args):
-        pass
-
+        print args
+        return args
 
     def __init__(self, command, channel, user):
-        self.command = command.popleft()
-        self._registry = REGISTRY[self._module_name]
+        if not isinstance(command, deque):
+            command = deque(command)
+
+        module_id = self._module_id.lower()
+
+        command_name = command.popleft()
+        if command_name == module_id:
+            command_name = 'default'
+
+        self._registry = REGISTRY[module_id]
         print self._registry
+
+        try:
+            self._registry[command_name]()
+        except KeyError as ie:
+            self.command_error(ie.message, command_name, command)
 
 
 

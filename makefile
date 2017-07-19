@@ -1,4 +1,4 @@
-BIN = $(HOME)/.virtualenvs/sodabot/bin
+BIN = $(HOME)/.virtualenvs/sodaslackbot/bin
 
 PYTHON = $(BIN)/python
 NOSE = $(BIN)/nosetests

@@ -1,4 +1,4 @@
-from functools import wraps
+import functools
 from collections import deque
 from copy import copy
 import re
@@ -8,57 +8,111 @@ from config import logger
 
 REGISTRY = {}
 
-class register_command(object):
+class CommandDecorator(object):
+    __name__ = "Basic Command" #This exists so it more closely mimics a func
+
+    def __init__(cls, new_command=None):
+        for attr in new_command.__dict__:
+            if attr.startswith('_bc'):
+                if not hasattr(cls, attr):
+                    setattr(cls, attr, new_command.__dict__[attr])
+
+
+class RegisterCommand(CommandDecorator):
+    __name__ = "Register Command"
+
     def __init__(cls, command):
-        cls._registered_command = command
+        #command._registered_command = command
+        cls._bc_registered_command = command
+        super(RegisterCommand, cls).__init__(command)
 
     def __call__(cls, *args, **kwargs):
-        return cls._registered_command(*args, **kwargs)
+        logger.debug("RegisterCommand args: %s", args)
+        logger.debug("RegisterCommand command: %s", cls._bc_registered_command)
+        cls._bc_registered_command(cls, args, kwargs)
+        return cls
 
-class default_command(object):
+class DefaultCommand(CommandDecorator):
+    __name__ = "Default Command"
+
     def __init__(cls, command):
-        cls._default_command = command
+        #command._bc_default_command = command
+        cls._bc_default_command = command
+        super(DefaultCommand, cls).__init__(command)
 
     def __call__(cls, *args, **kwargs):
-        return cls._default_command(*args, **kwargs)
+        logger.debug("DefaultCommand args: %s", args)
+        cls._bc_default_command(args, kwargs)
+        return cls
 
-class pattern_must_match(object):
-    def __init__(self, pattern):
-        self._pattern = re.compile(pattern)
-        print "init"
+def default_command(func):
+    return DefaultCommand(func)
+
+def register_command(func):
+    return RegisterCommand(func)
+
+class PatternMustMatch(CommandDecorator):
+    def __init__(self, pattern, requires_validation=True):
+        self._bc_pattern = pattern
+        self._bc_requires_validation = None
+        self._bc_initial_validation = requires_validation
 
     def syntax_error(self, message, fn, *args, **kwargs):
         logger.debug("Syntax Error: %s : %s in %s: %s", message, self.__class__, fn.__name__, message)
 
-    def __call__(self, fn, *args, **kwargs):
-        print "called"
-
-        def ret_fun(*args, **kwargs):
-            print self
-            print args
-            if re.match(self._pattern, " ".join(args)) is not None:
-                return fn(self, *args, **kwargs)
+    def __call__(self, command, *args, **kwargs):
+        #If our pattern is not set, we set it for the first time and we return the function
+        def validate(command, *args, **kwargs):
+            if self._validate(command, args, kwargs):
+                command(args, kwargs)
+                return self
             else:
-                return self.syntax_error("pattern_must_match error: ", fn, *args, **kwargs)
-        return ret_fun
+                return self.syntax_error("pattern must match error :: ", command, args, kwargs)
+
+        if self._bc_requires_validation:
+            return validate(command, args, kwargs)
+        else:
+            if self._bc_requires_validation is None:
+                super(PatternMustMatch, self).__init__(command)
+                self._bc_requires_validation = self._bc_initial_validation
+            logger.debug("PatternMatch args: %s", args)
+            command(args, kwargs)
+            return self
+
+
+
+    def _validate(self, command, *args, **kwargs):
+        if not self._bc_pattern:
+            return False
+        else:
+            if re.match(self._bc_pattern, " ".join(args)) is not None:
+                return True
+
+
+def pattern_must_match(pattern, validate):
+    return PatternMustMatch(pattern, validate)
 
 class MetaClass(type):
     def __init__(cls, name, bases, attrs):
         if cls._module_id not in (None, ""):
+            print "Adding %s to module list" % cls._module_id
             module_id = cls._module_id.lower()
 
             REGISTRY[module_id] = {}
             for key, val in attrs.iteritems():
-                registered_command = getattr(val, '_registered_command', None)
+                registered_command = getattr(val, '_bc_registered_command', None)
+
+                #logger.debug("Key: %s | dir Val: %s | Type Val: %s", key, dir(val), type(val))
                 if registered_command is not None:
                     REGISTRY[module_id][key] = registered_command
 
-                default_command = getattr(val, '_default_command', None)
+                default_command = getattr(val, '_bc_default_command', None)
                 if default_command is not None:
                     #If we have more than one default, we bail out
                     if REGISTRY[module_id].get('default', None):
                         raise Exception("Cannot have more than 1 default command")
                     REGISTRY[module_id]['default'] = default_command
+
         else:
             #We skip any class without a _module_id
             print "Skipping %s" % cls.__class__
@@ -68,7 +122,7 @@ class BotCommandModule(object):
     _module_id = ""
 
 
-    def command_error(self, message, command, *args, **kwrgs):
+    def command_error(self, message, command, *args, **kwargs):
         logger.debug("Unknown command with command %s and args %s: %s", command, args, message)
 
 class PepsiCommand(BotCommandModule):
@@ -76,19 +130,36 @@ class PepsiCommand(BotCommandModule):
     _module_id = "Pepsi"
 
     @register_command
-    def me(self, args):
+    def me(self, *args, **kwargs):
         pass
 
     @register_command
-    def list(self, args):
+    def list(self, *args, **kwargs):
         print "TEST"
 
+    @pattern_must_match('(\d\d?) cans? of ([\w\s]+).*', False)
     @default_command
     @register_command
-    @pattern_must_match('(\d\d?) cans? of ([\w\s]+).*')
-    def purchase(self, args):
-        print args
-        return args
+    def purchase(self, *args, **kwargs):
+        logger.debug("Purchase called with %s", args)
+
+        #user_model = get_user(user)
+        #drink_model = get_drink_type(drink_type)
+        #purchase = add_purchase(
+        #    buyer=user_model,
+        #    drink_type=drink_model,
+        #    purchase_date=dt,
+        #    num_cans=num
+        #)
+        #if purchase:
+        #    slack_client.api_call("chat.postMessage", channel=channel,
+
+        #                          text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
+        #else:
+        #    slack_client.api_call("chat.postMessage", channel=channel,
+
+        #                        text="Purchase failed!")
+        #return args
 
     def __init__(self, command, channel, user):
         if not isinstance(command, deque):
@@ -96,18 +167,39 @@ class PepsiCommand(BotCommandModule):
 
         module_id = self._module_id.lower()
 
-        command_name = command.popleft()
-        if command_name == module_id:
-            command_name = 'default'
-
-        self._registry = REGISTRY[module_id]
-        print self._registry
+        command_name = command[0]
+        logger.debug("%s has called for the %s command", user.username, command)
+        #logger.debug("Registry: %s", REGISTRY)
 
         try:
-            self._registry[command_name]()
+            REGISTRY[module_id][command_name](command[1:])
         except KeyError as ie:
-            self.command_error(ie.message, command_name, command)
+            try:
+                REGISTRY[module_id]['default'](command, *command)
+            except Exception as e:
+                self.command_error(ie.message, command_name, command)
 
+    def get_user(self, username):
+        try:
+            with db.atomic():
+                return User.create(username=username)
+        except ieerror:
+            return User.get(User.username == username)
+
+    def get_drink_type(self, drink_type):
+        try:
+            with db.atomic():
+                return DrinkType.create(name=drink_type)
+        except ieerror:
+            return DrinkType.get(DrinkType.name == drink_type)
+
+    def add_purchase(self, buyer, drink_type, purchase_date, num_cans):
+        try:
+            with db.atomic():
+                return Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
+        except ieerror as ie:
+            logger.debug("Error: %s", ie.message)
+            return None
 
 
     #    num = pepsi_match.group(1)
@@ -117,20 +209,6 @@ class PepsiCommand(BotCommandModule):
 
     #    user_model = get_user(user)
     #    drink_model = get_drink_type(drink_type)
-    #    purchase = add_purchase(
-    #        buyer=user_model,
-    #        drink_type=drink_model,
-    #        purchase_date=dt,
-    #        num_cans=num
-    #    )
-    #    if purchase:
-    #        slack_client.api_call("chat.postMessage", channel=channel,
-
-    #                              text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
-    #    else:
-    #        slack_client.api_call("chat.postMessage", channel=channel,
-
-    #                            text="Purchase failed!")
     #elif re.match(add_for_user_command_string, command.lower()) is not None:
     #    match = re.match(add_for_user_command_string, command.lower())
     #    username = match.group(1)
@@ -155,24 +233,3 @@ class PepsiCommand(BotCommandModule):
     #        slack_client.api_call("chat.postMessage", channel=channel,
 
     #                            text="Purchase failed!")
-    def get_user(self, username):
-        try:
-            with db.atomic():
-                return User.create(username=username)
-        except ieerror:
-            return User.get(User.username == username)
-
-    def get_drink_type(self, drink_type):
-        try:
-            with db.atomic():
-                return DrinkType.create(name=drink_type)
-        except ieerror:
-            return DrinkType.get(DrinkType.name == drink_type)
-
-    def add_purchase(self, buyer, drink_type, purchase_date, num_cans):
-        try:
-            with db.atomic():
-                return Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
-        except ieerror as ie:
-            logger.debug("Error: %s", ie.message)
-            return None

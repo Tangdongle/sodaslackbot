@@ -1,13 +1,13 @@
 from unittest import TestCase
 from nose.tools import nottest
 
-from commands import PepsiCommand
+import commands
 from models import User
 
 class PepsiCommandTest(TestCase):
 
-	def test_pepsi_purchase(self):
-		command = "pepsi 20 cans of Pepsi Max"
+	def test_pepsi_default(self):
+		command = "20 cans of Pepsi Max"
 
 		command_list = command.split(" ")
 
@@ -15,5 +15,5 @@ class PepsiCommandTest(TestCase):
 
 		user = User(username="user1")
 
-		b = PepsiCommand(command_list, channel, user)
+		b = commands.PepsiCommand(command_list, channel, user)
 

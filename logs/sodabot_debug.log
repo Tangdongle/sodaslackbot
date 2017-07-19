@@ -358,3 +358,793 @@
 2017-07-19 13:53:21,294 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max')
 2017-07-19 13:53:21,294 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ac18d7d4e60>
 2017-07-19 13:53:21,294 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max'), {})
+2017-07-19 13:57:36,272 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 13:57:36,272 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 13:57:36,272 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 13:57:36,272 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2abe399e1e60>
+2017-07-19 13:57:36,272 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 13:57:36,273 - sodabot - DEBUG - Purchase called with {}
+2017-07-19 13:57:48,593 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 13:57:48,593 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 13:57:48,593 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 13:57:48,593 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2afe2ade9e60>
+2017-07-19 13:57:48,593 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 13:57:48,593 - sodabot - DEBUG - Purchase called with {}
+2017-07-19 13:57:48,595 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 13:57:48,595 - sodabot - DEBUG - RegisterCommand args: (<sodaslackbot.models.User object at 0x2afe2adecc90>, deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max')
+2017-07-19 13:57:48,595 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2afe2ade9e60>
+2017-07-19 13:57:48,595 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 13:57:48,595 - sodabot - DEBUG - Purchase called with {}
+2017-07-19 13:58:37,255 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 13:58:37,255 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 13:58:37,255 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 13:58:37,255 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2afa93fbee60>
+2017-07-19 13:58:37,255 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 13:58:46,816 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 13:58:46,816 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 13:58:46,816 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 13:58:46,816 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ab0f0010e60>
+2017-07-19 13:58:46,816 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 13:58:46,818 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 13:58:46,818 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max')
+2017-07-19 13:58:46,818 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ab0f0010e60>
+2017-07-19 13:58:46,818 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max'), {})
+2017-07-19 14:00:16,738 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:00:16,738 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:00:16,738 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:00:16,738 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2aec087dce60>
+2017-07-19 14:00:16,738 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:00:16,739 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:00:16,739 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), deque(['20', 'cans', 'of', 'Pepsi', 'Max']))
+2017-07-19 14:00:16,739 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2aec087dce60>
+2017-07-19 14:00:16,739 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), deque(['20', 'cans', 'of', 'Pepsi', 'Max'])), {})
+2017-07-19 14:00:44,306 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:00:44,306 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:00:44,306 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:00:44,306 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b2bae97be60>
+2017-07-19 14:00:44,306 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:00:44,308 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:00:44,308 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:01:02,481 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:01:02,481 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:01:02,481 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:01:02,481 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b9c0e7f5e60>
+2017-07-19 14:01:02,481 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:01:02,482 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:01:02,482 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max')
+2017-07-19 14:01:02,482 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b9c0e7f5e60>
+2017-07-19 14:01:02,483 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max'), {})
+2017-07-19 14:01:08,755 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:01:08,755 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:01:08,755 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:01:08,755 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b06ba2e5e60>
+2017-07-19 14:01:08,756 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:01:08,757 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:01:08,757 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), deque(['20', 'cans', 'of', 'Pepsi', 'Max']))
+2017-07-19 14:01:08,757 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b06ba2e5e60>
+2017-07-19 14:01:08,757 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), deque(['20', 'cans', 'of', 'Pepsi', 'Max'])), {})
+2017-07-19 14:01:26,779 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:01:26,779 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:01:26,779 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:01:26,779 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b959a272e60>
+2017-07-19 14:01:26,779 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:01:26,781 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:01:26,781 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:01:26,781 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b959a272e60>
+2017-07-19 14:01:26,781 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']),), {})
+2017-07-19 14:01:39,847 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:01:39,847 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:01:39,848 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:01:39,848 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2aece71d1e60>
+2017-07-19 14:01:39,848 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:01:39,849 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:01:39,849 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max')
+2017-07-19 14:01:39,849 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2aece71d1e60>
+2017-07-19 14:01:39,849 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max'), {})
+2017-07-19 14:01:44,893 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:01:44,893 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:01:44,893 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:01:44,893 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b2c2410fe60>
+2017-07-19 14:01:44,893 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:01:44,895 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:01:44,895 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:01:55,672 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:01:55,672 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:01:55,672 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:01:55,672 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b79fc2bae60>
+2017-07-19 14:01:55,672 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:01:55,673 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:01:55,674 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max')
+2017-07-19 14:01:55,674 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b79fc2bae60>
+2017-07-19 14:01:55,674 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), '20', 'cans', 'of', 'Pepsi', 'Max'), {})
+2017-07-19 14:02:06,956 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:02:06,956 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:02:06,956 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:02:06,956 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b8b9d4b8e60>
+2017-07-19 14:02:06,957 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:02:06,958 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:02:06,958 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:02:06,958 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b8b9d4b8e60>
+2017-07-19 14:02:06,958 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']),), {'kwargs': deque(['20', 'cans', 'of', 'Pepsi', 'Max'])})
+2017-07-19 14:04:26,722 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:04:26,722 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:04:26,722 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:04:26,722 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b714a1a4de8>
+2017-07-19 14:04:26,722 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:04:26,726 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:09:54,588 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:09:54,588 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:09:54,589 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:09:54,589 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b4c15aa7ed8>
+2017-07-19 14:09:54,589 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:10:05,893 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:10:05,894 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:10:05,894 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:10:05,894 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b23b5eeaed8>
+2017-07-19 14:10:05,894 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:10:15,583 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:10:15,583 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:10:15,583 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:10:15,583 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b89ab0d4ed8>
+2017-07-19 14:10:15,583 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:11:19,008 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:11:19,008 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:11:19,008 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:11:19,008 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ba472592ed8>
+2017-07-19 14:11:19,008 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:13:08,398 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:13:08,398 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:13:08,398 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:13:08,399 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ba2bdf9bed8>
+2017-07-19 14:13:08,399 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:17:05,722 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:17:05,723 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:17:05,723 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:18:14,938 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:18:14,939 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:18:14,939 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:18:14,939 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:18:14,939 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:18:14,939 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:18:14,939 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:18:14,939 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b110deeaed8>
+2017-07-19 14:18:14,939 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:18:31,145 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:18:31,145 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:18:31,145 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:18:31,145 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:18:31,145 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:18:31,145 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:18:31,145 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:18:31,145 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b9e13aeee60>
+2017-07-19 14:18:31,145 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:18:31,147 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:18:31,147 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:18:31,148 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b9e13aeee60>
+2017-07-19 14:18:31,148 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']),), {})
+2017-07-19 14:20:37,252 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:20:52,072 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:20:52,073 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:20:52,073 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:20:52,073 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:20:52,073 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:21:17,692 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:21:17,692 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:21:17,692 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:21:17,692 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:21:17,692 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:21:17,692 - sodabot - DEBUG - Self is ()
+2017-07-19 14:21:43,543 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:21:43,543 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:21:43,543 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:21:43,543 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:21:43,543 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:22:16,770 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:22:16,770 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:22:16,770 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:22:16,771 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:22:16,771 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:22:16,771 - sodabot - DEBUG - func is {}
+2017-07-19 14:22:16,771 - sodabot - DEBUG - Self is ()
+2017-07-19 14:22:45,550 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:22:45,550 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:22:45,550 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:22:45,550 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:22:45,550 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:22:45,551 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:22:45,551 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:22:45,551 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b248e900e60>
+2017-07-19 14:22:45,551 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:22:45,552 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:22:45,552 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:22:45,552 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b248e900e60>
+2017-07-19 14:22:45,552 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']),), {})
+2017-07-19 14:23:42,369 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:23:42,369 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:23:42,369 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:23:42,369 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:23:42,369 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:23:42,369 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:23:42,369 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:23:42,369 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ba361190e60>
+2017-07-19 14:23:42,369 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:23:42,369 - sodabot - DEBUG - Self: <sodaslackbot.commands.RegisterCommand object at 0x2ba3611942d0>
+2017-07-19 14:24:53,290 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:24:53,290 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:24:53,290 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:24:53,290 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:24:53,290 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:24:53,290 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:24:53,290 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:24:53,290 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b6ffe9b7e60>
+2017-07-19 14:24:53,291 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:24:53,291 - sodabot - DEBUG - Self: <sodaslackbot.commands.RegisterCommand object at 0x2b6ffe9bb2d0>
+2017-07-19 14:25:08,918 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:25:08,918 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:25:08,918 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:25:08,918 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:25:08,918 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:25:08,918 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:25:08,918 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:25:08,918 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b8b12bf8e60>
+2017-07-19 14:25:08,918 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:25:08,918 - sodabot - DEBUG - Self: <sodaslackbot.commands.RegisterCommand object at 0x2b8b12bfe2d0>
+2017-07-19 14:25:08,920 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:25:08,920 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:25:42,315 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:25:42,316 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:25:42,316 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:25:42,316 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:25:42,316 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:25:42,316 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:25:42,316 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:25:42,316 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b46ff62ae60>
+2017-07-19 14:25:42,316 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:25:42,316 - sodabot - DEBUG - Self: <sodaslackbot.commands.RegisterCommand object at 0x2b46ff6302d0>
+2017-07-19 14:25:42,317 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:25:42,317 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:26:08,841 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:26:08,841 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:26:08,841 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:26:08,841 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:26:08,841 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:26:08,841 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:26:08,841 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:26:08,841 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ab7a4aebe60>
+2017-07-19 14:26:08,841 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:26:08,841 - sodabot - DEBUG - Self: <sodaslackbot.commands.RegisterCommand object at 0x2ab7a4af12d0>
+2017-07-19 14:26:08,842 - sodabot - DEBUG - Registry: 
+2017-07-19 14:26:08,843 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:26:08,843 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:26:16,444 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:26:16,444 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:26:16,444 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:26:16,444 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:26:16,444 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:26:16,445 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:26:16,445 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:26:16,445 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b4104be3e60>
+2017-07-19 14:26:16,445 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 14:26:16,445 - sodabot - DEBUG - Self: <sodaslackbot.commands.RegisterCommand object at 0x2b4104be92d0>
+2017-07-19 14:26:16,446 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b4104be3d70>, 'list': <function list at 0x2b4104be3de8>}} 
+2017-07-19 14:26:16,446 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:26:16,446 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:27:03,444 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:27:03,445 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:27:03,445 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:27:03,445 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:27:03,445 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:27:03,445 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:27:03,445 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:27:03,445 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2ac71b5cce60>
+2017-07-19 14:27:03,445 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:27:03,445 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:27:03,446 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2ac71b5ccd70>, 'list': <function list at 0x2ac71b5ccde8>}} 
+2017-07-19 14:27:03,447 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:27:03,447 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:28:35,023 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:28:35,023 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:28:35,023 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:28:35,023 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:28:35,023 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:28:35,023 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:28:35,023 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:28:35,023 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b85992c5e60>
+2017-07-19 14:28:35,023 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: me
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_registered_command']
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: purchase
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Val: ['__class__', '__delattr__', '__doc__', '__format__', '__func__', '__get__', '__getattribute__', '__hash__', '__init__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: __module__
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: _module_id
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: list
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_registered_command']
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: add_purchase
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:28:35,024 - sodabot - DEBUG - Key: get_user
+2017-07-19 14:28:35,025 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:28:35,025 - sodabot - DEBUG - Key: get_drink_type
+2017-07-19 14:28:35,025 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:28:35,025 - sodabot - DEBUG - Key: __init__
+2017-07-19 14:28:35,025 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:28:35,026 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b85992c5d70>, 'list': <function list at 0x2b85992c5de8>}} 
+2017-07-19 14:28:35,026 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:28:35,026 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:29:03,196 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:29:03,196 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:29:03,196 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:29:03,196 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:29:03,196 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:29:03,196 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:29:03,196 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:29:03,196 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b5f6912be60>
+2017-07-19 14:29:03,196 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Key: me
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_registered_command']
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Type: <class 'sodaslackbot.commands.RegisterCommand'>
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Obj: <sodaslackbot.commands.RegisterCommand object at 0x2b5f6912f310>
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Key: purchase
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Val: ['__class__', '__delattr__', '__doc__', '__format__', '__func__', '__get__', '__getattribute__', '__hash__', '__init__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Type: <type 'staticmethod'>
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Obj: <staticmethod object at 0x2b5f684feda8>
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Key: __module__
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Type: <type 'str'>
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Obj: sodaslackbot.commands
+2017-07-19 14:29:03,197 - sodabot - DEBUG - Key: _module_id
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Type: <type 'str'>
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Obj: Pepsi
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Key: list
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_registered_command']
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Type: <class 'sodaslackbot.commands.RegisterCommand'>
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Obj: <sodaslackbot.commands.RegisterCommand object at 0x2b5f6912f550>
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Key: add_purchase
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Obj: <function add_purchase at 0x2b5f69135140>
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Key: get_user
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:29:03,198 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Obj: <function get_user at 0x2b5f69135050>
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Key: get_drink_type
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Obj: <function get_drink_type at 0x2b5f691350c8>
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Key: __init__
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:29:03,199 - sodabot - DEBUG - Obj: <function __init__ at 0x2b5f6912bed8>
+2017-07-19 14:29:03,201 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b5f6912bd70>, 'list': <function list at 0x2b5f6912bde8>}} 
+2017-07-19 14:29:03,201 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:29:03,201 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),): 20
+2017-07-19 14:30:22,475 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:30:22,475 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:30:22,475 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:30:22,475 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:30:22,475 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:30:22,475 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:30:22,475 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:30:22,476 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b2b9bcbde60>
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Key: me
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_registered_command']
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Type: <class 'sodaslackbot.commands.RegisterCommand'>
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Obj: <sodaslackbot.commands.RegisterCommand object at 0x2b2b9bcc1310>
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Key: purchase
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_default_command', '_bc_initial_validation', '_bc_pattern', '_bc_registered_command', '_bc_requires_validation', '_validate', 'syntax_error']
+2017-07-19 14:30:22,476 - sodabot - DEBUG - Type: <class 'sodaslackbot.commands.PatternMustMatch'>
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Obj: <sodaslackbot.commands.PatternMustMatch object at 0x2b2b9bcc1590>
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Key: __module__
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Type: <type 'str'>
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Obj: sodaslackbot.commands
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Key: _module_id
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Type: <type 'str'>
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Obj: Pepsi
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Key: list
+2017-07-19 14:30:22,477 - sodabot - DEBUG - Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_registered_command']
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Type: <class 'sodaslackbot.commands.RegisterCommand'>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Obj: <sodaslackbot.commands.RegisterCommand object at 0x2b2b9bcc1550>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Key: add_purchase
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Obj: <function add_purchase at 0x2b2b9bcc7140>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Key: get_user
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Obj: <function get_user at 0x2b2b9bcc7050>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Key: get_drink_type
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Obj: <function get_drink_type at 0x2b2b9bcc70c8>
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Key: __init__
+2017-07-19 14:30:22,478 - sodabot - DEBUG - Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 14:30:22,479 - sodabot - DEBUG - Type: <type 'function'>
+2017-07-19 14:30:22,479 - sodabot - DEBUG - Obj: <function __init__ at 0x2b2b9bcbded8>
+2017-07-19 14:30:22,480 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b2b9bcbdd70>, 'purchase': <function purchase at 0x2b2b9bcbde60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b2b9bcc12d0>, 'list': <function list at 0x2b2b9bcbdde8>}} 
+2017-07-19 14:30:22,480 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:30:22,480 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:30:22,480 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b2b9bcbde60>
+2017-07-19 14:30:22,480 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:30:22,480 - sodabot - DEBUG - Self: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:30:36,048 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:30:36,048 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:30:36,048 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:30:36,048 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:30:36,048 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:30:36,049 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:30:36,049 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:30:36,049 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b5c630f2e60>
+2017-07-19 14:30:36,049 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:30:36,049 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:30:36,050 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b5c630f2d70>, 'purchase': <function purchase at 0x2b5c630f2e60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b5c630f82d0>, 'list': <function list at 0x2b5c630f2de8>}} 
+2017-07-19 14:30:36,050 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:30:36,050 - sodabot - DEBUG - RegisterCommand args: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:30:36,050 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b5c630f2e60>
+2017-07-19 14:30:36,050 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:30:36,050 - sodabot - DEBUG - Self: (deque(['20', 'cans', 'of', 'Pepsi', 'Max']),)
+2017-07-19 14:36:36,933 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:36:36,933 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:36:36,933 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:36:36,933 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:36:36,933 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:36:36,933 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:36:36,933 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:36:36,933 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b1644fdfe60>
+2017-07-19 14:36:36,933 - sodabot - DEBUG - RegisterCommand cls: <sodaslackbot.commands.RegisterCommand object at 0x2b1644fe5310>
+2017-07-19 14:36:36,933 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:36:36,933 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:36:36,934 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b1644fdfd70>, 'purchase': <function purchase at 0x2b1644fdfe60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b1644fe5310>, 'list': <function list at 0x2b1644fdfde8>}} 
+2017-07-19 14:36:36,934 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:36:36,934 - sodabot - DEBUG - RegisterCommand args: (<sodaslackbot.commands.PepsiCommand object at 0x2b1644fe5d10>, deque(['20', 'cans', 'of', 'Pepsi', 'Max']))
+2017-07-19 14:36:36,934 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2b1644fdfe60>
+2017-07-19 14:36:36,935 - sodabot - DEBUG - RegisterCommand cls: <sodaslackbot.commands.RegisterCommand object at 0x2b1644fe5310>
+2017-07-19 14:36:36,935 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:36:36,935 - sodabot - DEBUG - Self: (<sodaslackbot.commands.PepsiCommand object at 0x2b1644fe5d10>, deque(['20', 'cans', 'of', 'Pepsi', 'Max']))
+2017-07-19 14:38:08,068 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:38:08,068 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:38:08,068 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:38:08,068 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:41:44,487 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:41:44,488 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:41:44,488 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:41:44,488 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:41:44,488 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:41:44,488 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:41:44,488 - sodabot - DEBUG - RegisterCommand args: (((), {}), {})
+2017-07-19 14:41:44,488 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2adc1702de60>
+2017-07-19 14:41:44,488 - sodabot - DEBUG - RegisterCommand cls: <sodaslackbot.commands.RegisterCommand object at 0x2adc17033310>
+2017-07-19 14:41:44,488 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:41:44,488 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:41:44,490 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2adc1702dd70>, 'purchase': <function purchase at 0x2adc1702de60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2adc17033310>, 'list': <function list at 0x2adc1702dde8>}} 
+2017-07-19 14:41:44,490 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:41:44,490 - sodabot - DEBUG - RegisterCommand args: (<sodaslackbot.commands.PepsiCommand object at 0x2adc17033d10>, deque(['20', 'cans', 'of', 'Pepsi', 'Max']))
+2017-07-19 14:41:44,490 - sodabot - DEBUG - RegisterCommand command: <function purchase at 0x2adc1702de60>
+2017-07-19 14:41:44,490 - sodabot - DEBUG - RegisterCommand cls: <sodaslackbot.commands.RegisterCommand object at 0x2adc17033310>
+2017-07-19 14:41:44,490 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:41:44,490 - sodabot - DEBUG - Self: (<sodaslackbot.commands.PepsiCommand object at 0x2adc17033d10>, deque(['20', 'cans', 'of', 'Pepsi', 'Max']))
+2017-07-19 14:44:12,869 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:44:12,870 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:44:12,870 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:44:12,870 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:44:12,870 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:44:12,870 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:44:12,871 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b1d80915d70>, 'purchase': <function purchase at 0x2b1d80915e60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b1d8091b250>, 'list': <function list at 0x2b1d80915de8>}} 
+2017-07-19 14:44:12,872 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:45:18,704 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:45:18,704 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:45:18,704 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:45:18,704 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:45:18,704 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:45:18,704 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:45:18,704 - sodabot - DEBUG - {} isinstance BotCommandModuleL: False
+2017-07-19 14:45:18,706 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2ab4bdd51de8>, 'purchase': <function purchase at 0x2ab4bdd51ed8>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2ab4bdd53250>, 'list': <function list at 0x2ab4bdd51e60>}} 
+2017-07-19 14:45:18,706 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:45:18,706 - sodabot - DEBUG - deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2ab4bdd53c50>]) isinstance BotCommandModuleL: False
+2017-07-19 14:47:17,059 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:47:17,059 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:47:17,059 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:47:17,059 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:47:17,059 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:47:17,059 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 14:47:17,059 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:47:17,059 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 14:47:17,061 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2ad3013cdde8>, 'purchase': <function purchase at 0x2ad3013cded8>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2ad3013d2310>, 'list': <function list at 0x2ad3013cde60>}} 
+2017-07-19 14:47:17,061 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 14:47:17,061 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 14:47:17,061 - sodabot - DEBUG - Self: (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2ad3013d2d50>]),)
+2017-07-19 14:47:45,659 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:47:45,660 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:47:45,660 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:47:45,660 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:47:45,660 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:49:29,593 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:49:29,593 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:49:29,593 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:49:29,593 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:49:58,663 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:49:58,663 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:49:58,663 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:49:58,663 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:49:58,663 - sodabot - DEBUG - Calling class! <sodaslackbot.commands.PatternMustMatch object at 0x2ba6ddcd9550>
+2017-07-19 14:50:54,551 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:50:54,551 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:50:54,552 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:50:54,552 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:52:16,151 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:52:16,151 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:52:16,151 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:52:16,151 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:52:16,151 - sodabot - DEBUG - Calling class! <sodaslackbot.commands.PatternMustMatch object at 0x2b4809ca6550>
+2017-07-19 14:52:25,350 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:52:25,350 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:52:25,350 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:52:25,350 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:52:25,350 - sodabot - DEBUG - Calling class! <sodaslackbot.commands.PatternMustMatch object at 0x2b170a124550>
+2017-07-19 14:52:25,350 - sodabot - DEBUG - Lastarg: {}
+2017-07-19 14:57:22,222 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:57:22,222 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:57:22,223 - sodabot - DEBUG - Calling register command!
+2017-07-19 14:57:22,223 - sodabot - DEBUG - Calling default command!
+2017-07-19 14:57:22,223 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 14:57:22,223 - sodabot - DEBUG - Calling class! <sodaslackbot.commands.DefaultCommand object at 0x2b3f76e2d5d0>
+2017-07-19 14:57:22,223 - sodabot - DEBUG - Lastarg: {}
+2017-07-19 15:00:56,114 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:01:19,414 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:01:29,338 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:01:29,338 - sodabot - DEBUG - dir Command ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 15:01:29,338 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:01:29,338 - sodabot - DEBUG - dir Command ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 15:01:29,338 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:01:29,338 - sodabot - DEBUG - dir Command ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name']
+2017-07-19 15:01:29,338 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:01:29,338 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:02:08,933 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:02:08,934 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:02:08,934 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:02:08,934 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:02:08,934 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:02:08,934 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:02:08,934 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:02:08,934 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:02:22,866 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:02:22,866 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:02:22,866 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:02:22,866 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:02:22,866 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:02:22,866 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:02:22,866 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:02:22,867 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:02:22,867 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:02:22,867 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 15:02:22,867 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 15:02:22,868 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2ad0ef8c1d70>, 'purchase': <function purchase at 0x2ad0ef8c1e60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2ad0ef8c5610>, 'list': <function list at 0x2ad0ef8c1de8>}} 
+2017-07-19 15:02:22,868 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:02:22,868 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 15:02:22,868 - sodabot - DEBUG - Self: (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2ad0ef8c5d10>]),)
+2017-07-19 15:03:07,092 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:08:41,255 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:08:41,255 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:08:41,255 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:08:41,255 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:08:58,027 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:08:58,027 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:08:58,027 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:08:58,027 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:08:58,027 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:08:58,028 - sodabot - DEBUG - Registry: {'pepsi': {'default': <function wrapper at 0x2ac49032f050>}} 
+2017-07-19 15:08:58,029 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:08:58,029 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:08:58,029 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:11:01,366 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:11:01,366 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:11:01,366 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:11:01,366 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:11:16,851 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:11:16,851 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:11:16,851 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:11:16,851 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:11:22,456 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:11:22,457 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:11:22,457 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:11:22,457 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:12:21,786 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:12:21,786 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:12:21,786 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:12:21,786 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:12:53,838 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:12:53,838 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:12:53,839 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:12:53,839 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:13:17,465 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:13:17,466 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:13:17,466 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:13:17,466 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:13:23,719 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:13:23,719 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:13:23,719 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:13:23,719 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:13:23,719 - sodabot - DEBUG - Self: ((), {})
+2017-07-19 15:17:19,008 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:17:58,880 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:17:58,882 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:17:58,882 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:17:58,882 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2b9b42d3bc10>]),): 20
+2017-07-19 15:18:53,766 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: me | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: purchase | dir Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_initial_validation', '_bc_pattern', '_bc_requires_validation', '_validate', 'syntax_error'] | Type Val: <class 'sodaslackbot.commands.PatternMustMatch'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: __module__ | dir Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill'] | Type Val: <type 'str'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: _module_id | dir Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill'] | Type Val: <type 'str'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: list | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: add_purchase | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: get_user | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: get_drink_type | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:18:53,767 - sodabot - DEBUG - Key: __init__ | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:18:53,769 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:18:53,769 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:18:53,769 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2aeeeeb8dc10>]),): 20
+2017-07-19 15:19:54,496 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: me | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: purchase | dir Val: ['__call__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bc_initial_validation', '_bc_pattern', '_bc_requires_validation', '_validate', 'syntax_error'] | Type Val: <class 'sodaslackbot.commands.PatternMustMatch'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: __module__ | dir Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill'] | Type Val: <type 'str'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: _module_id | dir Val: ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill'] | Type Val: <type 'str'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: list | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: add_purchase | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: get_user | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: get_drink_type | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:19:54,497 - sodabot - DEBUG - Key: __init__ | dir Val: ['__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__doc__', '__format__', '__get__', '__getattribute__', '__globals__', '__hash__', '__init__', '__module__', '__name__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'func_closure', 'func_code', 'func_defaults', 'func_dict', 'func_doc', 'func_globals', 'func_name'] | Type Val: <type 'function'>
+2017-07-19 15:19:54,499 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:19:54,499 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:19:54,499 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2b5f7139ac10>]),): 20
+2017-07-19 15:22:09,541 - sodabot - DEBUG - Calling pattern command!
+2017-07-19 15:22:09,542 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:22:09,542 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:22:09,542 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2aedf303bc10>]),): 20
+2017-07-19 15:22:57,919 - sodabot - DEBUG - Calling pattern command!
+2017-07-19 15:25:24,246 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:25:24,246 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:25:24,246 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2ac7f1bf6bd0>]),): 20
+2017-07-19 15:25:55,193 - sodabot - DEBUG - Func <function me at 0x2ad298011de8>
+2017-07-19 15:25:55,193 - sodabot - DEBUG - Func <function list at 0x2ad298011ed8>
+2017-07-19 15:25:55,193 - sodabot - DEBUG - Func <function purchase at 0x2ad298017050>
+2017-07-19 15:25:55,194 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:25:55,195 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:25:55,195 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2ad298015bd0>]),): 20
+2017-07-19 15:26:08,144 - sodabot - DEBUG - Func <function me at 0x2b208799ade8>
+2017-07-19 15:26:08,144 - sodabot - DEBUG - Func <function list at 0x2b208799aed8>
+2017-07-19 15:26:08,144 - sodabot - DEBUG - Func <function purchase at 0x2b20879a0050>
+2017-07-19 15:26:08,145 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:26:08,145 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:26:08,145 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2b208799ec10>]),): 20
+2017-07-19 15:26:58,401 - sodabot - DEBUG - Func <function me at 0x2aae2a6b3de8>
+2017-07-19 15:26:58,401 - sodabot - DEBUG - Func <function list at 0x2aae2a6b3ed8>
+2017-07-19 15:26:58,401 - sodabot - DEBUG - Func <function purchase at 0x2aae2a6bb050>
+2017-07-19 15:26:58,402 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:26:58,403 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:26:58,403 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2aae2a6b7c10>]),): 20
+2017-07-19 15:29:03,147 - sodabot - DEBUG - Func <function me at 0x2b423fc73de8>
+2017-07-19 15:29:03,148 - sodabot - DEBUG - Func <function list at 0x2b423fc73ed8>
+2017-07-19 15:29:03,148 - sodabot - DEBUG - Func <function purchase at 0x2b423fc7b050>
+2017-07-19 15:29:30,724 - sodabot - DEBUG - Func <function me at 0x2abbd1c84de8>
+2017-07-19 15:29:30,724 - sodabot - DEBUG - Func <function list at 0x2abbd1c84ed8>
+2017-07-19 15:29:30,725 - sodabot - DEBUG - Func <function purchase at 0x2abbd1c8c050>
+2017-07-19 15:29:30,725 - sodabot - DEBUG - Default command func: <function purchase at 0x2abbd1c8c0c8>
+2017-07-19 15:29:30,726 - sodabot - DEBUG - Registry: {'pepsi': {}} 
+2017-07-19 15:29:30,726 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:29:30,726 - sodabot - DEBUG - Unknown command with command 20 and args (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2abbd1c88c50>]),): 20
+2017-07-19 15:30:42,649 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:30:42,649 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:30:42,649 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:30:42,649 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:30:42,649 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:30:42,649 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:30:42,649 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:30:42,649 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:30:42,650 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:30:42,650 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 15:30:42,650 - sodabot - DEBUG - Self: (((), {}), {})
+2017-07-19 15:30:42,651 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b63653eed70>, 'purchase': <function purchase at 0x2b63653eee60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b63653f2610>, 'list': <function list at 0x2b63653eede8>}} 
+2017-07-19 15:30:42,651 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:30:42,651 - sodabot - DEBUG - Purchase called with ({},)
+2017-07-19 15:30:42,651 - sodabot - DEBUG - Self: (deque(['20', 'cans', 'of', 'Pepsi', 'Max', <sodaslackbot.commands.PepsiCommand object at 0x2b63653f2d10>]),)
+2017-07-19 15:46:11,701 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:11,701 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:11,701 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:11,701 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:11,701 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:11,701 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:11,701 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:46:11,701 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:46:11,702 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:46:11,702 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 15:46:35,638 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:35,638 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:35,638 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:35,638 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:35,638 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:35,638 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:35,638 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:46:35,638 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:46:35,638 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:46:35,638 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 15:46:48,677 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:48,677 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:48,677 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:48,677 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:48,677 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:46:48,677 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:46:48,677 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:46:48,677 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:46:48,677 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:46:48,677 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {})
+2017-07-19 15:46:48,679 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2ae7bf591d70>, 'purchase': <function purchase at 0x2ae7bf591e60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2ae7bf593650>, 'list': <function list at 0x2ae7bf591de8>}} 
+2017-07-19 15:46:48,679 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:46:48,679 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']),), {})
+2017-07-19 15:47:00,088 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:47:00,088 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:47:00,088 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:47:00,088 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:47:00,088 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:47:00,088 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:47:00,088 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:47:00,088 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:47:00,088 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:47:00,089 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {}): {}
+2017-07-19 15:47:00,090 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b7eb547dd70>, 'purchase': <function purchase at 0x2b7eb547de60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b7eb547f650>, 'list': <function list at 0x2b7eb547dde8>}} 
+2017-07-19 15:47:00,090 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:47:00,090 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']),), {}): {}
+2017-07-19 15:47:13,682 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:47:13,682 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:47:13,682 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:47:13,682 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:47:13,682 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:47:13,682 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:47:13,682 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:47:13,682 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:47:13,682 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:47:13,682 - sodabot - DEBUG - Purchase called with ((((), {}), {}), {}): {}
+2017-07-19 15:47:13,684 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b9943755d70>, 'purchase': <function purchase at 0x2b9943755e60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b9943757650>, 'list': <function list at 0x2b9943755de8>}} 
+2017-07-19 15:47:13,684 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:47:13,684 - sodabot - DEBUG - Purchase called with ((deque(['20', 'cans', 'of', 'Pepsi', 'Max']), {'self': <sodaslackbot.commands.PepsiCommand object at 0x2b9943757d50>}), {}): {}
+2017-07-19 15:48:07,776 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:48:07,777 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:48:07,777 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:48:07,777 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:48:07,777 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:48:07,777 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:48:07,777 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:48:07,777 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:48:07,777 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:48:07,778 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b8bfa683d70>, 'purchase': <function purchase at 0x2b8bfa683e60>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b8bfa6885d0>, 'list': <function list at 0x2b8bfa683de8>}} 
+2017-07-19 15:48:07,779 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:48:48,548 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:48:48,549 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:48:48,549 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:48:48,549 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:48:48,549 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:48:48,549 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:48:48,549 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:48:48,549 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:48:48,549 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:48:48,550 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b1b0b14acf8>, 'purchase': <function purchase at 0x2b1b0b14ade8>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b1b0b1515d0>, 'list': <function list at 0x2b1b0b14ad70>}} 
+2017-07-19 15:48:48,550 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:49:24,434 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:49:24,434 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:49:24,434 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:49:24,434 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:49:24,434 - sodabot - DEBUG - Calling register command!
+2017-07-19 15:49:24,434 - sodabot - DEBUG - dir Command <type 'function'>
+2017-07-19 15:49:24,434 - sodabot - DEBUG - Calling default command!
+2017-07-19 15:49:24,434 - sodabot - DEBUG - PatternMatch args: ()
+2017-07-19 15:49:24,434 - sodabot - DEBUG - DefaultCommand args: ((), {})
+2017-07-19 15:49:24,434 - sodabot - DEBUG - Kwargs: {}
+2017-07-19 15:49:24,436 - sodabot - DEBUG - Registry: {'pepsi': {'me': <function me at 0x2b99f664ecf8>, 'purchase': <function purchase at 0x2b99f664ede8>, 'default': <sodaslackbot.commands.RegisterCommand object at 0x2b99f66555d0>, 'list': <function list at 0x2b99f664ed70>}} 
+2017-07-19 15:49:24,436 - sodabot - DEBUG - user1 has called for the deque(['20', 'cans', 'of', 'Pepsi', 'Max']) command
+2017-07-19 15:49:24,436 - sodabot - DEBUG - Kwargs: {}

@@ -8,6 +8,9 @@ from config import logger
 
 REGISTRY = {}
 
+class NonCommandModuleException(Exception):
+    pass
+
 class CommandDecorator(object):
     __name__ = "Basic Command" #This exists so it more closely mimics a func
 
@@ -17,19 +20,17 @@ class CommandDecorator(object):
                 if not hasattr(cls, attr):
                     setattr(cls, attr, new_command.__dict__[attr])
 
-
 class RegisterCommand(CommandDecorator):
     __name__ = "Register Command"
 
     def __init__(cls, command):
         #command._registered_command = command
+        logger.debug("dir Command %s", command.__class__)
         cls._bc_registered_command = command
         super(RegisterCommand, cls).__init__(command)
 
     def __call__(cls, *args, **kwargs):
-        logger.debug("RegisterCommand args: %s", args)
-        logger.debug("RegisterCommand command: %s", cls._bc_registered_command)
-        cls._bc_registered_command(cls, args, kwargs)
+        cls._bc_registered_command(args, kwargs)
         return cls
 
 class DefaultCommand(CommandDecorator):
@@ -46,46 +47,48 @@ class DefaultCommand(CommandDecorator):
         return cls
 
 def default_command(func):
+    logger.debug("Calling default command!")
     return DefaultCommand(func)
 
 def register_command(func):
+    logger.debug("Calling register command!")
     return RegisterCommand(func)
 
 class PatternMustMatch(CommandDecorator):
-    def __init__(self, pattern, requires_validation=True):
-        self._bc_pattern = pattern
-        self._bc_requires_validation = None
-        self._bc_initial_validation = requires_validation
+    def __init__(cls, pattern, requires_validation=True):
+        cls._bc_pattern = pattern
+        cls._bc_requires_validation = None
+        cls._bc_initial_validation = requires_validation
 
-    def syntax_error(self, message, fn, *args, **kwargs):
-        logger.debug("Syntax Error: %s : %s in %s: %s", message, self.__class__, fn.__name__, message)
+    def syntax_error(cls, message, fn, *args, **kwargs):
+        logger.debug("Syntax Error: %s : %s in %s: %s", message, cls.__class__, fn.__name__, message)
 
-    def __call__(self, command, *args, **kwargs):
+    def __call__(cls, command, *args, **kwargs):
         #If our pattern is not set, we set it for the first time and we return the function
         def validate(command, *args, **kwargs):
-            if self._validate(command, args, kwargs):
+            if cls._validate(command, args, kwargs):
                 command(args, kwargs)
-                return self
+                return cls
             else:
-                return self.syntax_error("pattern must match error :: ", command, args, kwargs)
+                return cls.syntax_error("pattern must match error :: ", command, args, kwargs)
 
-        if self._bc_requires_validation:
+        if cls._bc_requires_validation:
             return validate(command, args, kwargs)
         else:
-            if self._bc_requires_validation is None:
-                super(PatternMustMatch, self).__init__(command)
-                self._bc_requires_validation = self._bc_initial_validation
+            if cls._bc_requires_validation is None:
+                super(PatternMustMatch, cls).__init__(command)
+                cls._bc_requires_validation = cls._bc_initial_validation
             logger.debug("PatternMatch args: %s", args)
             command(args, kwargs)
-            return self
+            return cls
 
 
 
-    def _validate(self, command, *args, **kwargs):
-        if not self._bc_pattern:
+    def _validate(cls, command, *args, **kwargs):
+        if not cls._bc_pattern:
             return False
         else:
-            if re.match(self._bc_pattern, " ".join(args)) is not None:
+            if re.match(cls._bc_pattern, " ".join(args)) is not None:
                 return True
 
 
@@ -100,6 +103,7 @@ class MetaClass(type):
 
             REGISTRY[module_id] = {}
             for key, val in attrs.iteritems():
+
                 registered_command = getattr(val, '_bc_registered_command', None)
 
                 #logger.debug("Key: %s | dir Val: %s | Type Val: %s", key, dir(val), type(val))
@@ -140,26 +144,36 @@ class PepsiCommand(BotCommandModule):
     @pattern_must_match('(\d\d?) cans? of ([\w\s]+).*', False)
     @default_command
     @register_command
-    def purchase(self, *args, **kwargs):
-        logger.debug("Purchase called with %s", args)
+    def purchase(*args, **kwargs):
+        logger.debug("Kwargs: %s", kwargs)
+        if 'self' not in kwargs:
+            return None
 
-        #user_model = get_user(user)
-        #drink_model = get_drink_type(drink_type)
-        #purchase = add_purchase(
-        #    buyer=user_model,
-        #    drink_type=drink_model,
-        #    purchase_date=dt,
-        #    num_cans=num
-        #)
-        #if purchase:
-        #    slack_client.api_call("chat.postMessage", channel=channel,
+        instance = kwargs['self']
 
-        #                          text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
-        #else:
-        #    slack_client.api_call("chat.postMessage", channel=channel,
 
-        #                        text="Purchase failed!")
-        #return args
+        logger.debug("Instance: %s", instance)
+        num = args[0]
+        drink_type = args[-1:]
+
+
+        user_model = self.get_user(self.user)
+        drink_model = self.get_drink_type(drink_type)
+        purchase = self.add_purchase(
+            buyer=user_model,
+            drink_type=drink_model,
+            purchase_date=dt,
+            num_cans=num
+        )
+        if purchase:
+            slack_client.api_call("chat.postMessage", channel=channel,
+
+                                  text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
+        else:
+            slack_client.api_call("chat.postMessage", channel=channel,
+
+                                text="Purchase failed!")
+        return args
 
     def __init__(self, command, channel, user):
         if not isinstance(command, deque):
@@ -167,39 +181,21 @@ class PepsiCommand(BotCommandModule):
 
         module_id = self._module_id.lower()
 
+        self.user = user
+        logger.debug("Registry: %s ", REGISTRY)
+
         command_name = command[0]
         logger.debug("%s has called for the %s command", user.username, command)
-        #logger.debug("Registry: %s", REGISTRY)
+        commands = {'self':self}
 
         try:
-            REGISTRY[module_id][command_name](command[1:])
+            REGISTRY[module_id][command_name](command[1:], commands)
         except KeyError as ie:
             try:
-                REGISTRY[module_id]['default'](command, *command)
+                REGISTRY[module_id]['default'](command, commands)
             except Exception as e:
-                self.command_error(ie.message, command_name, command)
+                self.command_error(ie.message, command_name, commands=command)
 
-    def get_user(self, username):
-        try:
-            with db.atomic():
-                return User.create(username=username)
-        except ieerror:
-            return User.get(User.username == username)
-
-    def get_drink_type(self, drink_type):
-        try:
-            with db.atomic():
-                return DrinkType.create(name=drink_type)
-        except ieerror:
-            return DrinkType.get(DrinkType.name == drink_type)
-
-    def add_purchase(self, buyer, drink_type, purchase_date, num_cans):
-        try:
-            with db.atomic():
-                return Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
-        except ieerror as ie:
-            logger.debug("Error: %s", ie.message)
-            return None
 
 
     #    num = pepsi_match.group(1)

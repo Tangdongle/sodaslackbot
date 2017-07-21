@@ -13,3 +13,5 @@ test:
 shell:
 	$(PYTHON)
 
+sql:
+	sqlite3 db/sodarecords.db

@@ -5,26 +5,16 @@ import json
 import time
 
 from datetime import datetime
-from peewee import IntegrityError as ieerror
 from slackclient import SlackClient
 from config import logger
 
 from commands import *
 
-from models import db
+from models import db, DB_FILE
 
 READ_WEBSOCKET_DELAY = 1
 
 SCANNER = re.compile('[A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+''')
-
-#Matches the user sending (1), the target user (2) and the command (3)
-#user_target_command = re.compile("^(\w+): @(\w+) (.*)")
-#pepsi_command_string = "^(\d\d?) cans? of ([\w\s]+).*"
-#
-#add_for_user_command_string = "^(\w+)! (\d\d?) cans? of ([\w\s]+).*"
-
-#pepsi_pattern = re.compile(pepsi_command_string)
-
 
 BOT_ID = os.environ.get('BOT_ID')
 
@@ -37,6 +27,12 @@ DEFAULT_COMMAND_LIST = {"pepsi": "PepsiCommand"}
 
 class SodaBot(object):
     def __init__(self):
+        try:
+            db.connect()
+        except Exception:
+            db.init(DB_FILE)
+            db.connect()
+
         cmd_list_loaded = self.load_command_list()
         if not cmd_list_loaded:
             logger.error("No commands available")

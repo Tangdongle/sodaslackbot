@@ -1,9 +1,13 @@
 import functools
 from collections import deque
 from copy import copy
+import itertools
 import re
+from datetime import datetime
+from peewee import IntegrityError as ieerror
+from sodabot import slack_client
 
-from models import User, Purchase, DrinkType
+from models import User, Purchase, DrinkType, db
 from config import logger
 
 REGISTRY = {}
@@ -15,6 +19,9 @@ class CommandDecorator(object):
     __name__ = "Basic Command" #This exists so it more closely mimics a func
 
     def __init__(cls, new_command=None):
+        logger.debug("%s is the new command", new_command)
+        if isinstance(new_command, str) or new_command is None:
+            return cls
         for attr in new_command.__dict__:
             if attr.startswith('_bc'):
                 if not hasattr(cls, attr):
@@ -24,13 +31,13 @@ class RegisterCommand(CommandDecorator):
     __name__ = "Register Command"
 
     def __init__(cls, command):
-        #command._registered_command = command
-        logger.debug("dir Command %s", command.__class__)
         cls._bc_registered_command = command
         super(RegisterCommand, cls).__init__(command)
 
-    def __call__(cls, *args, **kwargs):
-        cls._bc_registered_command(args, kwargs)
+    def __call__(cls, instance, *args, **kwargs):
+        logger.debug("RegisterCommand Args: %s", args)
+        logger.debug("RegisterCommand Kwargs: %s", kwargs)
+        cls._bc_registered_command(instance, args, kwargs)
         return cls
 
 class DefaultCommand(CommandDecorator):
@@ -41,9 +48,10 @@ class DefaultCommand(CommandDecorator):
         cls._bc_default_command = command
         super(DefaultCommand, cls).__init__(command)
 
-    def __call__(cls, *args, **kwargs):
-        logger.debug("DefaultCommand args: %s", args)
-        cls._bc_default_command(args, kwargs)
+    def __call__(cls, instance, *args, **kwargs):
+        logger.debug("DefaultCommand Args: %s", args)
+        logger.debug("DefaultCommand Kwargs: %s", kwargs)
+        cls._bc_default_command(instance, args, kwargs)
         return cls
 
 def default_command(func):
@@ -64,8 +72,12 @@ class PatternMustMatch(CommandDecorator):
         logger.debug("Syntax Error: %s : %s in %s: %s", message, cls.__class__, fn.__name__, message)
 
     def __call__(cls, command, *args, **kwargs):
+        logger.debug("PatternMatch command: %s", command)
+        logger.debug("PatternMatch Args: %s", args)
+        logger.debug("PatternMatch KWArgs: %s", kwargs)
         #If our pattern is not set, we set it for the first time and we return the function
         def validate(command, *args, **kwargs):
+            logger.debug("Validating pattern for %s", command)
             if cls._validate(command, args, kwargs):
                 command(args, kwargs)
                 return cls
@@ -139,26 +151,45 @@ class PepsiCommand(BotCommandModule):
 
     @register_command
     def list(self, *args, **kwargs):
-        print "TEST"
+        l = "%s: %s cans of %s\n"
+        total = ""
+        for p in Purchase.select():
+            total += l % (p.buyer, p.num_cans, p.drink_type)
 
-    @pattern_must_match('(\d\d?) cans? of ([\w\s]+).*', False)
+        slack_client.api_call("chat.postMessage", channel=self.channel,
+                              text="Totals: \n%s" % total, as_user=True)
+
+
+
+
+    @pattern_must_match('(\d\d?) cans? of ([\w\s]+).*', True)
     @default_command
     @register_command
-    def purchase(*args, **kwargs):
-        logger.debug("Kwargs: %s", kwargs)
-        if 'self' not in kwargs:
-            return None
+    def purchase(self, *args, **kwargs):
+        logger.debug("self, %s", self)
+        logger.debug("args %s", args)
+        logger.debug("kwargs %s", kwargs)
 
-        instance = kwargs['self']
+        if self in [(), {}, (({}, ()), {})]:
+            return
 
+        command = kwargs.pop('command', None)
 
-        logger.debug("Instance: %s", instance)
-        num = args[0]
-        drink_type = args[-1:]
+        num = args[0][0]
+        drink_start = args[0].index('of') + 1
+        drink_type = ' '.join(list(args[0])[drink_start:])
+
+        #drink_type = itertools.islice(args[0][0],len(args[0][0]) -1,None)
 
 
         user_model = self.get_user(self.user)
         drink_model = self.get_drink_type(drink_type)
+        dt = datetime.utcnow()
+
+        logger.debug("Cans: %s", num)
+        logger.debug("User Model: %s", user_model)
+        logger.debug("Drink Type: %s", drink_model)
+        logger.debug("dt: %s", dt)
         purchase = self.add_purchase(
             buyer=user_model,
             drink_type=drink_model,
@@ -166,66 +197,61 @@ class PepsiCommand(BotCommandModule):
             num_cans=num
         )
         if purchase:
-            slack_client.api_call("chat.postMessage", channel=channel,
-
-                                  text="%s bought %s cans of %s on %s" % (user, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
+            slack_client.api_call("chat.postMessage", channel=self.channel, text="%s bought %s cans of %s on %s" % (self.user.username, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
         else:
-            slack_client.api_call("chat.postMessage", channel=channel,
-
-                                text="Purchase failed!")
+            slack_client.api_call("chat.postMessage", channel=self.channel, text="Purchase failed!")
         return args
 
     def __init__(self, command, channel, user):
         if not isinstance(command, deque):
             command = deque(command)
 
+        self.channel = channel
         module_id = self._module_id.lower()
+        logger.debug("COMMAND %s", command)
 
         self.user = user
         logger.debug("Registry: %s ", REGISTRY)
 
         command_name = command[0]
         logger.debug("%s has called for the %s command", user.username, command)
-        commands = {'self':self}
+        commands = {
+            'command': command_name
+        }
+
 
         try:
-            REGISTRY[module_id][command_name](command[1:], commands)
+            REGISTRY[module_id][command_name](self, itertools.islice(command, 1, None), **commands)
         except KeyError as ie:
             try:
-                REGISTRY[module_id]['default'](command, commands)
+                commands['command'] = None
+                REGISTRY[module_id]['default'](self, *command, **commands)
             except Exception as e:
+                logger.error("Exception reached in module: %s %s", e, e.message)
                 self.command_error(ie.message, command_name, commands=command)
 
+    #### DB Wrapper functions ###
+    def get_user(self, username):
+        logger.debug("Getting user %s ",username)
+        try:
+            with db.atomic():
+                return User.create(username=username)
+        except ieerror:
+            return User.get(User.username == username)
 
+    def get_drink_type(self, drink_type):
+        logger.debug("Getting Drinky Type %s ", drink_type)
+        try:
+            with db.atomic():
+                return DrinkType.create(name=drink_type)
+        except ieerror:
+            return DrinkType.get(DrinkType.name == drink_type)
 
-    #    num = pepsi_match.group(1)
-    #    drink_type = pepsi_match.group(2)
-    #    dt = datetime.utcnow()
-        #slack_client.api_call("chat.postMessage", channel=channel, text="I don't understand. Pepsi command is '{num} cans of {drink type}'", as_user=True)
-
-    #    user_model = get_user(user)
-    #    drink_model = get_drink_type(drink_type)
-    #elif re.match(add_for_user_command_string, command.lower()) is not None:
-    #    match = re.match(add_for_user_command_string, command.lower())
-    #    username = match.group(1)
-    #    num = match.group(2)
-    #    drink_type = match.group(3)
-    #    dt = datetime.utcnow()
-
-    #    user_model = get_user(username)
-    #    drink_model = get_drink_type(drink_type)
-    #    purchase = add_purchase(
-    #        buyer=user_model,
-    #        drink_type=drink_model,
-    #        purchase_date=dt,
-    #        num_cans=num
-    #    )
-
-    #    if purchase:
-    #        slack_client.api_call("chat.postMessage", channel=channel,
-
-    #                              text="%s bought %s cans of %s on %s" % (user_model.username, num, drink_type, dt.strftime("%A, %m-%d %H:%M")), as_user=True)
-    #    else:
-    #        slack_client.api_call("chat.postMessage", channel=channel,
-
-    #                            text="Purchase failed!")
+    def add_purchase(self, buyer, drink_type, purchase_date, num_cans):
+        logger.debug("Creating purchase %s ",num_cans)
+        try:
+            with db.atomic():
+                return Purchase.create(buyer=buyer, drink_type=drink_type, purchase_date=purchase_date, num_cans=num_cans)
+        except ieerror as ie:
+            logger.debug("Error: %s", ie.message)
+            return None

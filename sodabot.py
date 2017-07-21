@@ -80,7 +80,7 @@ class SodaBot(object):
             command_module = self.command_list[command.popleft()]
             #Access our named command
             result = globals()[command_module](command, channel, user)
-        except (NameError, KeyError):
+        except (NameError, KeyError) as e:
             logger.error("%s Error: %s" % (type(e), e.message))
             slack_client.api_call("chat.postMessage", channel=channel, text="@%s I don't understand that command. Available commands are: %s" % (user,
                                                                                                                                                  "\n\t".join(["`{}`".format(com) for com in self.command_list.keys()])), as_user=True)
@@ -105,7 +105,9 @@ class SodaBot(object):
 
 
 if __name__ == '__main__':
+    from models import verify_table
     bot = SodaBot()
+    verify_table()
     bot.loop()
 
 

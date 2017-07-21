@@ -19,3 +19,12 @@ class Purchase(BaseModel):
     drink_type = ForeignKeyField(DrinkType, related_name='drink_types')
     num_cans = IntegerField()
     purchase_date = DateTimeField()
+
+def verify_table():
+    if not User.table_exists():
+        User.create_table(True)
+    if not DrinkType.table_exists():
+        DrinkType.create_table(True)
+    if not Purchase.table_exists():
+        Purchase.create_table(True)
+
